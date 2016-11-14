@@ -1,0 +1,43 @@
+@import './shared/common-styles';
+
+.page-wrapper {
+  font-family: 'Roboto';
+}
+
+#nav {
+  z-index: 1;
+  border-bottom: 0px solid transparent;
+  transition: 0.5s;
+  .active-tab {
+    border-bottom: 4px solid $white-light;
+    height: 64px;
+  }
+  a:active, a:focus {
+    background-color: transparent;
+  }
+}
+
+#logo {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  position: relative;
+  bottom: 12px;
+  left: 5px;
+}
+
+
+#gb, #st {
+  font-family: 'Alegreya Sans';
+  position: relative;
+  bottom: 9px;
+  left: 5px;
+  font-size: 23px;
+  @media (max-width: 330px) {
+    font-size: 21px;
+  }
+}
+
+#st {
+  font-weight: 300;
+}

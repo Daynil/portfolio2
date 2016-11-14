@@ -1,0 +1,119 @@
+@import '../shared/common-styles';
+
+#about-me-link {
+  float: left;
+  width: 100%;
+  padding-bottom: 50px;
+  min-height: 1000px;
+  margin-top: -23px;
+}
+
+.container-fluid {
+  position: relative;
+  padding: 0;
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.3);
+}
+
+#me-big {
+  -webkit-filter: brightness(88%);
+  filter: brightness(88%);
+}
+
+#name {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  padding: 15px;
+  h1, h3 {
+    color: $white-light;
+    margin: 0;
+  }
+  h3 {
+    font-weight: 100;
+  }
+}
+
+#name-small {
+  text-align: center;
+  margin-top: -40px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 750px) {
+  #name {
+    display: none;
+  }
+}
+
+@media (min-width: 750px) {
+  #name-small {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  #name {
+    top: -5px;
+    left: 20px;
+  }
+}
+
+#about-me {
+  min-width: 50%;
+  color: #2B252C;
+  font-size: 17px;
+  margin-top: 50px;
+}
+
+#philosophy {
+  margin-top: 0px;
+}
+
+#about-me #me {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 4px hsla(0, 0%, 0%, 0.4);
+}
+
+#about-me span {
+  display: block;
+  background: $brand-primary;
+  border-radius: 18px;
+  height: 45px;
+  width: 120px;
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+
+#about-me span:hover {
+  background: $brand-primary;
+}
+
+#talk-link {
+  margin: 0 auto;
+  display: block;
+  width: 100px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+#philosophy2 {
+  padding-top: 10px;
+}
+
+.skillbar {
+  animation-duration: 0.5s;
+  animation-name: skillup;
+}
+
+@keyframes skillup {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,88 @@
+@import '../shared/common-styles';
+
+#portfolio-link {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  color: #2B252C;
+  padding-bottom: 50px;
+}
+
+#glow-link {
+  font-size: 36px;
+  margin-top: 5%;
+}
+
+.portfolio {
+    min-height: 100%;
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  box-shadow: 0 -1px 0 hsl(0, 0%, 90%),
+              0 0 2px hsla(0, 0%, 0%, 0.12),
+              0 2px 4px hsla(0, 0%, 0%, 0.24);
+  border-radius: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: 0.4s;
+  &:hover {
+    box-shadow: 0 0 6px hsla(0, 0%, 0%, 0.16),
+                0 6px 12px hsla(0, 0%, 0%, 0.32)
+  }
+  img {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  .caption {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+#me-link, #me-link:active {
+  color: $brand-primary;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+#me-link:hover {
+  color: #2B252C;
+  text-decoration: none;
+}
+
+#glow-link > .glow {
+  transition: all 0.5s;
+}
+
+#glow-link:hover > .glow {
+  color: $brand-primary;
+}
+
+#portfolio-link #subtitle {
+  padding: 20px 0px 20px 0px;
+}
+
+.divider {
+  background-color: $brand-primary;
+  margin-top: -17px;
+  width: 40%;
+}
+
+#top-row {
+  padding-bottom: 15px;
+}
