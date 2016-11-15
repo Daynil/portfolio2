@@ -104,11 +104,17 @@
   padding-top: 10px;
 }
 
+#skills {
+  margin-top: -10px;
+}
+
 .prog {
   background-color: hsl(45, 100%, 70%);
-  height: 6px;
+  height: 7px;
   width: 100%;
-  margin-bottom: 23px;
+  margin-top: 2px;
+  margin-bottom: 21px;
+  border-radius: 10px;
 }
 
 .prog-bar {
