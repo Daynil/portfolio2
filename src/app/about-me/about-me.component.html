@@ -1,62 +1,66 @@
 <div id="about-me-link" [class.page-transition]="transitionService.isTransitioning()">
-    <div class="container-fluid">
-        <img class="img-responsive" id="me-big" src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1469083903/webpicnarrow3-lr_oceb6h.jpg">
-        <div id="name">
-            <h1>Danny Libin</h1>
-            <h3>Full Stack Web Developer</h3>
-        </div>
+  <div class="container-fluid">
+    <img class="img-responsive" id="me-big" src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1469083903/webpicnarrow3-lr_oceb6h.jpg">
+    <div id="name">
+      <h1>Danny Libin</h1>
+      <h3>Full Stack Web Developer</h3>
     </div>
-    <div id="about-me" class="container">
-        <div id="name-small">
-            <h3>Danny Libin</h3>
-            <div class="divider"></div>
-            <h4>Full Stack Web Developer</h4>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <h3>Who am I?</h3>
-                <p>I'm a web developer located in sunny (sometimes) Florida. I love tackling interesting, difficult projects to 
-                    expand my experience and expertise in the field. The pace of progress on the web has become extremely rapid, 
-                    and I'm always looking for new ways to make my code faster, simpler and more robust. I've been coding for 
-                    three years and have found a passion in crafting accessible, functional applications.
-                </p>
-                <h3 id="philosophy">Philosophy</h3>
-                <p>
-                    The web has grown into an amazing platform for application development, and I'm fascinated by its
-                    potential. It is uniquely suited for ubiquitous delivery of content and allows for the greatest possible reach
-                    for the modern internet - global audiences and diverse devices. 
-                    It provides for an incredibly flexible approach towards building applications that 
-                    are used by people and businesses all over the world. </p>
-            </div>
-            <div class="col-md-4">
-                <img id="me" src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1468707722/IMG_20151006_123225_3_ifvhtj.jpg">
-            </div>
-            <div class="col-md-12">
-                <p id="philosophy2">
-                    Real world applications should be intuitive, clean, fun to use and provide value
-                    to everyday users. That's what I strive for in every project I develop. I enjoy learning
-                    new technologies and experimenting with the cutting-edge in order to provide for the richest possible web experience.
-                </p>
-            </div>
-            <div class="col-md-12">
-                <h3 id="skills">Proficiencies</h3>
-            </div>
-            <div class="col-md-6">
-                <div *ngFor="let language of languages">
-                    <div class="name">{{ language.name }}</div>
-                    <div class="progress">
-                        <div class="progress-bar skillbar" [style.width.%]="language.amount"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div *ngFor="let framework of frameworks">
-                    <div class="name">{{ framework.name }}</div>
-                    <div class="progress">
-                        <div class="progress-bar" [style.width.%]="framework.amount"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </div>
+  <div id="about-me" class="container">
+    <div id="name-small">
+      <h3>Danny Libin</h3>
+      <div class="divider"></div>
+      <h4>Full Stack Web Developer</h4>
     </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor="let language of languages">
+          <div class="name">{{ language.name }}</div>
+          <div class="prog">
+            <div class="prog-bar-wrap" [style.width.%]="language.amount">
+              <div class="prog-bar skillbar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div *ngFor="let framework of frameworks">
+          <div class="name">{{ framework.name }}</div>
+          <div class="prog">
+            <div class="prog-bar-wrap" [style.width.%]="framework.amount">
+              <div class="prog-bar skillbar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h3>Who am I?</h3>
+        <p>I'm a web developer located in sunny (sometimes) Florida. I love tackling interesting, difficult projects to 
+            expand my experience and expertise in the field. The pace of progress on the web has become extremely rapid, 
+            and I'm always looking for new ways to make my code faster, simpler and more robust. I've been coding for 
+            three years and have found a passion in crafting accessible, functional applications.
+        </p>
+        <h3 id="philosophy">Philosophy</h3>
+        <p>
+            The web has grown into an amazing platform for application development, and I'm fascinated by its
+            potential. It is uniquely suited for ubiquitous delivery of content and allows for the greatest possible reach
+            for the modern internet - global audiences and diverse devices. 
+            It provides for an incredibly flexible approach towards building applications that 
+            are used by people and businesses all over the world. </p>
+      </div>
+      <div class="col-md-4">
+        <img id="me" src="http://res.cloudinary.com/dz9rf4hwz/image/upload/v1468707722/IMG_20151006_123225_3_ifvhtj.jpg">
+      </div>
+      <div class="col-md-12">
+        <p id="philosophy2">
+            Real world applications should be intuitive, clean, fun to use and provide value
+            to everyday users. That's what I strive for in every project I develop. I enjoy learning
+            new technologies and experimenting with the cutting-edge in order to provide for the richest possible web experience.
+        </p>
+      </div>
+      <div class="col-md-12">
+        <h3 id="skills">Proficiencies</h3>
+      </div>
+    </div>
+  </div>
 </div>

@@ -104,9 +104,22 @@
   padding-top: 10px;
 }
 
+.prog {
+  background-color: hsl(45, 100%, 70%);
+  height: 6px;
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.prog-bar {
+  @extend .prog;
+  background-color: $brand-primary;
+}
+
 .skillbar {
-  animation-duration: 0.5s;
+  animation-duration: 0.9s;
   animation-name: skillup;
+  animation-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
 }
 
 @keyframes skillup {
