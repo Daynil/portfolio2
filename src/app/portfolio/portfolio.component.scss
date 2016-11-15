@@ -54,6 +54,37 @@
   }
 }
 
+#ccaw {
+  padding: 10px;
+  padding-top: 23px;
+}
+
+#shelley {
+  height: 247px;
+  width: initial;
+  padding: 20px;
+}
+
+#portfolio-app {
+  width: 247px;
+  padding: 30px;
+}
+
+.image-container {
+  width: 300px;
+  height: 247px;
+}
+
+.ccaw {
+  background-color: hsl(0, 100%, 33%);
+}
+.shelley {
+  background-color: hsl(211, 49%, 68%);
+}
+.site {
+  background-color: $brand-primary;
+}
+
 #me-link, #me-link:active {
   color: $brand-primary;
   text-decoration: none;

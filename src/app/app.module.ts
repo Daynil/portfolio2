@@ -15,11 +15,14 @@ import { ContactComponent } from './contact/contact.component';
 
 /** Services */
 import { TransitionService } from './shared/transition.service';
+import { CcawComponent } from './projects/ccaw/ccaw.component';
+import { ShelleyComponent } from './projects/shelley/shelley.component';
+import { PortfolioComponent } from './projects/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, AboutMeComponent,
-    PortfolioComponent, ContactComponent
+    PortfolioComponent, ContactComponent, CcawComponent, ShelleyComponent, PortfolioComponent
   ],
   imports: [
     BrowserModule,
