@@ -1,0 +1,19 @@
+<div #carousel class="carousel-container" (window:resize)="onResize($event)">
+  <div *ngFor="let slide of slides; let i = index;">
+    <div *ngIf="i === activeIndex" 
+          [ngClass]="containerClass()"
+          [style.min-height.px]="minHeight">
+      <img [src]="slide.imageUrl" class="img-responsive">
+    </div>
+  </div>
+
+  <div class="navigation">
+    <div *ngFor="let slide of slides; let i = index;">
+      <i *ngIf="i !== activeIndex"
+          class="fa fa-circle-o" aria-hidden="true"
+          (click)="changeActiveIndex(i)"></i>
+      <i *ngIf="i === activeIndex"
+          class="fa fa-circle" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>

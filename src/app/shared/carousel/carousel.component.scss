@@ -1,0 +1,16 @@
+@import '../common-styles.scss';
+
+.fa-circle-o, .fa-circle {
+  cursor: pointer;
+  margin: 5px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+
+.image-container {
+  width: 100%;
+}

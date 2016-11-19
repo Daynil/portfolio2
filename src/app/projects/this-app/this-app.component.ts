@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TransitionService } from '../../shared/transition.service';
+
 @Component({
   selector: 'app-this-app',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  templateUrl: './this-app.component.html',
+  styleUrls: ['./this-app.component.scss']
 })
 export class ThisAppComponent implements OnInit {
 
-  constructor() { }
+  constructor(private transitionService: TransitionService) { }
 
   ngOnInit() {
+    this.transitionService.transition();
   }
-
 }

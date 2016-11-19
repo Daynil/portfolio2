@@ -13,16 +13,21 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 
-/** Services */
-import { TransitionService } from './shared/transition.service';
 import { CcawComponent } from './projects/ccaw/ccaw.component';
 import { ShelleyComponent } from './projects/shelley/shelley.component';
-import { PortfolioComponent } from './projects/portfolio/portfolio.component';
+import { ThisAppComponent } from './projects/this-app/this-app.component';
+
+import { CarouselComponent } from './shared/carousel/carousel.component';
+
+/** Services */
+import { TransitionService } from './shared/transition.service';
 
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, AboutMeComponent,
-    PortfolioComponent, ContactComponent, CcawComponent, ShelleyComponent, PortfolioComponent
+    PortfolioComponent, ContactComponent,
+    CcawComponent, ShelleyComponent, ThisAppComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
