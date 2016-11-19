@@ -1,11 +1,66 @@
 <div [class.page-transition]="transitionService.isTransitioning()">
 
-  <div class="container">
+  <div class="container route">
+    <h2 class="text-center">Speaker Management Application</h2>
+    <div class="divider"></div>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 carousel">
         <carousel [interval]="interval" [slides]="slides">
         </carousel>
       </div>
+    </div>
+
+    <div>
+      <h3>What is it?</h3>
+      <p>After receiving all three certifications on 
+        <a href="https://www.freecodecamp.com/about" target="_blank">Free Code Camp</a>
+         (<a href="https://www.freecodecamp.com/daynil/front-end-certification" target="_blank">Front End</a>, 
+         <a href="https://www.freecodecamp.com/daynil/data-visualization-certification" target="_blank">Data Visualization</a>,
+         <a href="https://www.freecodecamp.com/daynil/back-end-certification" target="_blank">Back End</a>),
+         about 1,200 hours of challenges, campers get to build a series of applications for non-profit organizatons with a partner.
+         These are complex, full stack, custom applications selected by FCC to challenge campers to 
+         practice and develop their skills in the real world while helping a non-profit. <br/><br/> 
+         
+         
+         This project was developed for the organization 
+         <a href="http://conferencecaw.org/" target="_blank">Conference on Crimes Against Women</a> by my partner and I over 
+         the course of about 3 months. The stakeholder requested that we develop an application that streamlines 
+         the process of potential speakers providing their information, submitting presentation proposals, 
+         and uploading necessary documents, while allowing the administrators to manage the schedule, speakers, and presentations over 
+         the course of multiple conference years.
+      </p>
+    </div>
+
+    <div>
+      <h3>Methodology</h3>
+      <p>
+        We worked in coordination with a volunteer project manager and the stakeholder from 
+        CCAW. Utilizing agile development methodology, we met for weekly sprint conference calls 
+        to discuss progress, issues and clarifications that come up, and to get feedback from 
+        the stakeholder to make sure everything meets their expectations.<br/><br/>
+
+        My partner and I met regularly for pair programming sessions and to discuss what both of 
+        us were going to work on in the following week. We used git and github to work 
+        collaboratively and coordinate our efforts.
+      </p>
+    </div>
+
+    <div>
+      <h3>Tech Stack</h3>
+      <ul>
+        <li><b>Front end:</b> Angular 2.x</li>
+        <li><b>Back end:</b> Node and Express</li>
+        <li><b>Database:</b> MongoDB and Mongoose</li>
+        <li><b>Hosting:</b> Heroku and mLab</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="https://github.com/Daynil/ccaw-angcli" target="_blank">Github Repository</a></li>
+        <li><a href="#" target="_blank">Video Demo and Walkthrough</a></li>
+      </ul>
     </div>
   
   </div>
