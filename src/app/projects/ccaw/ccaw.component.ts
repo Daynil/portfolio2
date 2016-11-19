@@ -38,8 +38,5 @@ export class CcawComponent implements OnInit {
     this.slides.push(new Slide(
       'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1479495791/dashboard_cqqbpj.png',
     ));
-    this.slides.push(new Slide(
-      'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1472415953/cassiesign_m3cwbd.jpg',
-    ));
   }
 }

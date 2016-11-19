@@ -57,10 +57,10 @@
 }
 
 #bg {
-  background: url('http://res.cloudinary.com/dz9rf4hwz/image/upload/v1468707880/woVRMu1_btq6hj.jpg');
 	background-size: cover;
   background-attachment: fixed;
-	-webkit-filter: brightness(55%);
+  background-color: hsl(60, 80%, 95%);
+  -webkit-filter: brightness(55%);
 	filter: brightness(55%);
 	position: absolute;
 	width: 100%;
@@ -69,4 +69,24 @@
 	top: 0;
   left: 0;
 	z-index: -1;
+}
+
+.bg-image {
+  background: url('http://res.cloudinary.com/dz9rf4hwz/image/upload/v1468707880/woVRMu1_btq6hj.jpg');
+  -webkit-filter: brightness(55%);
+	filter: brightness(55%);
+}
+
+.bg-transition {
+  animation-duration: 0.6s;
+  animation-name: fadein;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
