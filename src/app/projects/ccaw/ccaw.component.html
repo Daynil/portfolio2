@@ -5,7 +5,8 @@
     <div class="divider"></div>
     <div class="row">
       <div class="col-md-12 carousel">
-        <carousel [interval]="interval" [slides]="slides">
+        <carousel [interval]="interval" [slides]="slides"
+                  (imageZoom)="imageToZoom($event)">
         </carousel>
       </div>
     </div>
@@ -64,5 +65,11 @@
     </div>
   
   </div>
+
+  <div class="zoomImgContainer" [ngClass]="getZoomClasses()">
+    <img [src]="zoomImgUrl" #zoomImage class="img-responsive"
+         (blur)="closeZoom()" (click)="closeZoom()" tabindex="1">
+  </div>
+
 
 </div>

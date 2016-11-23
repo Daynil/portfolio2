@@ -1,6 +1,6 @@
 import { Component, OnInit,
-         Input, OnDestroy,
-         ElementRef, ViewChild } from '@angular/core';
+         Input, Output, OnDestroy,
+         ElementRef, ViewChild, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'carousel',
@@ -8,9 +8,11 @@ import { Component, OnInit,
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit, OnDestroy {
-  @Input('interval') interval;
-  @Input('slides') slides: Slide[];
+  @Input() interval;
+  @Input() slides: Slide[];
   @ViewChild('carousel') carousel: ElementRef;
+
+  @Output() imageZoom = new EventEmitter<string>();
 
   activeIndex = 0;
   slideTransitioning = false;
@@ -23,12 +25,17 @@ export class CarouselComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.preloadImages();
-    //this.rotation = setInterval(() => this.nextSlide(), this.interval);
     this.calculateHeight();
+    this.refreshRotation();
   }
 
   ngOnDestroy() {
-    //clearInterval(this.rotation);
+    clearInterval(this.rotation);
+  }
+
+  refreshRotation() {
+    if (this.rotation) clearInterval(this.rotation);
+    this.rotation = setInterval(() => this.nextSlide(), this.interval);
   }
 
   preloadImages() {
@@ -50,6 +57,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   changeActiveIndex(i: number) {
+    this.refreshRotation();
     this.activeIndex = i;
     this.slideChange();
   }
@@ -78,6 +86,10 @@ export class CarouselComponent implements OnInit, OnDestroy {
       'image-container': true,
       'page-transition': this.slideTransitioning
     };
+  }
+
+  imgClicked(imageUrl: string) {
+    this.imageZoom.emit(imageUrl);
   }
 
 }
