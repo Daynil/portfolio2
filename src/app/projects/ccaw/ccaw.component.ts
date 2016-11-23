@@ -62,7 +62,7 @@ export class CcawComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.zoomImgUrl = '';
       this.closing = false;
-    }, 590);
+    }, 550);
   }
 
   getZoomClasses() {

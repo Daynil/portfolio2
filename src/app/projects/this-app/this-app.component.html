@@ -1,3 +1,45 @@
 <div [class.page-transition]="transitionService.isTransitioning()">
 
+  <div class="container route">
+    <h2 class="text-center">Goldenbot Studios Portfolio</h2>
+    <div class="divider"></div>
+
+    <div>
+      <h3>What is it?</h3>
+      <p>
+        I created this website as a single page application as a way to showcase what I want out of a website 
+        - snappy response, slick and interactive interface, and a clean, simple, responsive design. Although traditional 
+        backend-heavy websites still have their place, I believe a well thought out single page application 
+        architecture is the way forward in the presentation of most websites. With this architecture,
+        you get increased interactivity and immediate response times, as well as more flexibility in design 
+        and organization of code. I believe the slightly increased up-front load times, which can be minimized 
+        with intelligent use of preloading, are more than offset by all of these benefits. <br/><br/>
+        
+        This portfolio application serves as a living demonstration of my skills as they develop.
+      </p>
+    </div>
+
+    <div>
+      <h3>Tech Stack</h3>
+      <ul>
+        <li><b>Front end:</b> Angular 2.x</li>
+        <li><b>Back end:</b> Node and Express</li>
+        <li><b>Hosting:</b> Digital Ocean</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Links</h3>
+      <ul>
+        <li><a href="https://github.com/Daynil/portfolio2" target="_blank">Github Repository</a></li>
+      </ul>
+    </div>
+  
+  </div>
+
+  <div class="zoomImgContainer" [ngClass]="getZoomClasses()">
+    <img [src]="zoomImgUrl" #zoomImage class="img-responsive"
+         (blur)="closeZoom()" (click)="closeZoom()" tabindex="1">
+  </div>
+
 </div>
