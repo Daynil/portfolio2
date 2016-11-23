@@ -4,16 +4,18 @@
   font-family: 'Roboto';
 }
 
-#nav {
-  z-index: 1;
-  border-bottom: 0px solid transparent;
-  transition: 0.5s;
-  .active-tab {
-    border-bottom: 4px solid $white-light;
-    height: 64px;
-  }
-  a:active, a:focus {
-    background-color: transparent;
+@media (min-width: 768px) {
+  #nav {
+    z-index: 1;
+    border-bottom: 0px solid transparent;
+    transition: 0.5s;
+    .active-tab {
+      border-bottom: 4px solid $white-light;
+      height: 64px;
+    }
+    a:active, a:focus {
+      background-color: transparent;
+    }
   }
 }
 
