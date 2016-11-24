@@ -21,13 +21,15 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 
 /** Services */
 import { TransitionService } from './shared/transition.service';
+import { ImageZoomComponent } from './shared/image-zoom/image-zoom.component';
 
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, AboutMeComponent,
     PortfolioComponent, ContactComponent,
     CcawComponent, ShelleyComponent, ThisAppComponent,
-    CarouselComponent
+    CarouselComponent,
+    ImageZoomComponent
   ],
   imports: [
     BrowserModule,

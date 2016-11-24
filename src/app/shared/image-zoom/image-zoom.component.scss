@@ -1,0 +1,57 @@
+.zoomImgContainer {
+  z-index: 2;
+  background-color: hsla(0, 0%, 0%, 0.4);
+  position: fixed;
+  padding: 20px;
+  left: 0;
+  top: 0;
+  
+  img {
+    margin: 0 auto;
+    cursor: zoom-out;
+    box-shadow: 0 0 6px hsla(0, 0%, 0%, 0.16),
+                0 6px 12px hsla(0, 0%, 0%, 0.32);
+    &:focus {
+      outline: none;
+    }
+  }
+
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.gone {
+  display: none;
+}
+
+.fade-in-transition {
+  animation-duration: 0.6s;
+  animation-name: fadein;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out-transition {
+  animation-duration: 0.6s;
+  animation-name: fadeout;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

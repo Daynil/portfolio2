@@ -1,5 +1,4 @@
-import { Component, OnInit, AfterViewInit,
-         ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { TransitionService } from '../../shared/transition.service';
 import { Slide } from '../../shared/carousel/carousel.component';
@@ -9,24 +8,17 @@ import { Slide } from '../../shared/carousel/carousel.component';
   templateUrl: './ccaw.component.html',
   styleUrls: ['./ccaw.component.scss']
 })
-export class CcawComponent implements OnInit, AfterViewInit {
+export class CcawComponent implements OnInit {
   interval = 7000;
   slides: Slide[] = [];
 
   zoomImgUrl = '';
-  @ViewChild('zoomImage') zoomImgRef: ElementRef;
-  zoomImg: HTMLImageElement;
-  closing = false;
 
   constructor(private transitionService: TransitionService) { }
 
   ngOnInit() {
     this.transitionService.transition();
     this.createSlides();
-  }
-
-  ngAfterViewInit() {
-    this.zoomImg = this.zoomImgRef.nativeElement;
   }
 
   createSlides() {
@@ -51,26 +43,7 @@ export class CcawComponent implements OnInit, AfterViewInit {
   }
 
   imageToZoom(imgUrl: string) {
-    if (this.closing) return;
     this.zoomImgUrl = imgUrl;
-    this.zoomImg.focus();
-  }
-
-  closeZoom() {
-    if (this.closing) return;
-    this.closing = true;
-    setTimeout(() => {
-      this.zoomImgUrl = '';
-      this.closing = false;
-    }, 550);
-  }
-
-  getZoomClasses() {
-    return {
-      'gone': !this.zoomImgUrl,
-      'page-transition': this.zoomImgUrl,
-      'fade-out-transition': this.closing
-    };
   }
 
 }

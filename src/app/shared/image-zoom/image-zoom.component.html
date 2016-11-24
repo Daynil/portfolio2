@@ -1,0 +1,6 @@
+<div class="zoomImgContainer"
+     (window:load)="getWindow($event)" (window:resize)="getWindow($event)"
+     #zoomContainer [ngClass]="getZoomClasses()">
+  <img [src]="_zoomImgUrl" #zoomImage class="img-responsive"
+       (blur)="closeZoom()" (click)="closeZoom()" tabindex="1">
+</div>
