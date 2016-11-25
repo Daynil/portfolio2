@@ -18,7 +18,7 @@ const mailgun = new Mailgun({apiKey: mailgun_api, domain: domain});
 
 const app = express();
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 let verboseLogging = false;
 
 app.use(cors());
