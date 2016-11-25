@@ -40,6 +40,16 @@ export class CcawComponent implements OnInit {
     this.slides.push(new Slide(
       'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1479918750/dashboard_hbbfkn.png',
     ));
+
+    this.slides.push(new Slide(
+      'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1472415953/cassiesign_m3cwbd.jpg',
+    ));
+    this.slides.push(new Slide(
+      'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1470258281/shelleytalk_ezacku.jpg',
+    ));
+    this.slides.push(new Slide(
+      'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1446101475/wGOdwla_rxj5k5.jpg',
+    ));
   }
 
   imageToZoom(imgUrl: string) {

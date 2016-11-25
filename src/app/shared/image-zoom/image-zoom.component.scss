@@ -2,7 +2,10 @@
   z-index: 2;
   background-color: hsla(0, 0%, 0%, 0.4);
   position: fixed;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100vw;
+  height: 100vh;
   left: 0;
   top: 0;
   
@@ -20,7 +23,7 @@
 
 .img-responsive {
   display: block;
-  max-width: 100%;
+  max-width: calc(100vw - 40px);
   height: auto;
 }
 
@@ -54,4 +57,11 @@
   to {
     opacity: 0;
   }
+}
+
+.zoomed-img {
+  display: block;
+  max-width: 95%;
+  max-height: 95%;
+  margin: 0 auto;
 }
