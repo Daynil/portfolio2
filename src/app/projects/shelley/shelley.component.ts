@@ -1,5 +1,4 @@
-import { Component, OnInit, AfterViewInit,
-         ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { TransitionService } from '../../shared/transition.service';
 import { Slide } from '../../shared/carousel/carousel.component';
@@ -9,14 +8,11 @@ import { Slide } from '../../shared/carousel/carousel.component';
   templateUrl: './shelley.component.html',
   styleUrls: ['./shelley.component.scss']
 })
-export class ShelleyComponent implements OnInit, AfterViewInit {
+export class ShelleyComponent implements OnInit {
   interval = 7000;
   slides: Slide[] = [];
 
   zoomImgUrl = '';
-  @ViewChild('zoomImage') zoomImgRef: ElementRef;
-  zoomImg: HTMLImageElement;
-  closing = false;
 
   constructor(private transitionService: TransitionService) { }
 
@@ -25,9 +21,6 @@ export class ShelleyComponent implements OnInit, AfterViewInit {
     this.createSlides();
   }
 
-  ngAfterViewInit() {
-    this.zoomImg = this.zoomImgRef.nativeElement;
-  }
 
   createSlides() {
     this.slides.push(new Slide(
@@ -42,26 +35,7 @@ export class ShelleyComponent implements OnInit, AfterViewInit {
   }
 
   imageToZoom(imgUrl: string) {
-    if (this.closing) return;
     this.zoomImgUrl = imgUrl;
-    this.zoomImg.focus();
-  }
-
-  closeZoom() {
-    if (this.closing) return;
-    this.closing = true;
-    setTimeout(() => {
-      this.zoomImgUrl = '';
-      this.closing = false;
-    }, 550);
-  }
-
-  getZoomClasses() {
-    return {
-      'gone': !this.zoomImgUrl,
-      'page-transition': this.zoomImgUrl,
-      'fade-out-transition': this.closing
-    };
   }
 
 }

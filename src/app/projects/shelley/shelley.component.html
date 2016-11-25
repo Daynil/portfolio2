@@ -48,9 +48,6 @@
   
   </div>
 
-  <div class="zoomImgContainer" [ngClass]="getZoomClasses()">
-    <img [src]="zoomImgUrl" #zoomImage class="img-responsive"
-         (blur)="closeZoom()" (click)="closeZoom()" tabindex="1">
-  </div>
+<app-image-zoom [zoomImgUrl]="zoomImgUrl" (zoomedOut)="zoomImgUrl = ''"></app-image-zoom>
 
 </div>
